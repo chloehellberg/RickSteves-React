@@ -11,16 +11,18 @@ function MerchItem(props){
     lineHeight: "1.5em",
     position: "relative"
   }
+  
   return(
     <React.Fragment>
+      
       <div class="product-list-item-container">
         <img class="product-list-image-container" src={props.image}></img>
         <h3>{props.name}</h3>
         <h3>{props.description}</h3>
         <h3>{props.quantity}</h3>
-        <button onClick = {() => props.whenMerchClicked(props.id)}>Details</button>
-        {/* <button class="btn">Details</button> */}
+      
       </div>
+      <button onClick = {() => props.whenMerchClicked(props.id)}>Details</button>
     </React.Fragment>
   );
 }

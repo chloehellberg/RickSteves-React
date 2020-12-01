@@ -7,9 +7,9 @@ function MerchDetail(props){
   return (
     <React.Fragment>
       <h1>Merch Detail</h1>
+      <img src = {merch.image}></img>
       <h3>{merch.name} - {merch.description}</h3>
       <p>Quantity: {merch.quantity}</p>
-      <p><em>{merch.image}</em></p>
       <button onClick={() => onClickingEdit(merch.id) }>Update Merch</button>
       <button onClick={()=> onClickingDelete(merch.id) }>Delete Merch</button>
       <hr/>

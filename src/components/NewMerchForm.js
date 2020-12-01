@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function NewMerchForm(props) {
   function handleNewMerchFormSubmission(event) {
     event.preventDefault();
-    props.onNewMerchItemCreation({name: event.target.name.value, description: event.target.description.value, quantity: event.target.quantity.value, id: v4() })
+    props.onNewMerchItemCreation({name: event.target.name.value, description: event.target.description.value, quantity: event.target.quantity.value, image: event.target.image.value, id: v4() })
   }
 return (
   <React.Fragment>
@@ -23,6 +23,10 @@ return (
       type='text'
       name= 'quantity'
       placeholder= 'How many'/>
+      <input
+      type='text'
+      name= 'image'
+      placeholder= 'Enter Image URL Here'/>
       <button type='submit'>Submit</button>
     </form>
   </React.Fragment>

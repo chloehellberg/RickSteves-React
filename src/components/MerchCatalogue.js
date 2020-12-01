@@ -37,7 +37,7 @@ function MerchCatalogue(props){
   return(
     <React.Fragment>
       <h3>Placeholder catalogue</h3>
-      {props.merchItemList.map((merchItem) =>
+      {Object.values(props.merchItemList).map((merchItem) =>
       <MerchItem 
         whenMerchClicked = {props.onMerchSelection}
         name = {merchItem.name}
@@ -53,7 +53,7 @@ function MerchCatalogue(props){
 }
 
 MerchCatalogue.propTypes = {
-  merchItemList: PropTypes.array,
+  merchItemList: PropTypes.object,
   onMerchSelection: PropTypes.func,
 };
 
